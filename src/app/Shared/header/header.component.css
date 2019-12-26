@@ -1,0 +1,25 @@
+#logo{
+    height: 11%;
+    width: 11%;
+}
+
+#banner
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #005A7F;
+}
+
+#bannerTxt{
+    font-family: 'Merriweather', serif;
+    color: white;
+    font-size: 32px;
+    margin-left: 25%;
+}
+
+#navBar{
+    margin-top: 4.2%;
+    background-color: #dfe6e9;
+}
