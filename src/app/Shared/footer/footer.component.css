@@ -1,4 +1,11 @@
 #footerText{
-    margin-left: 45vw;
-    margin-top: 100vh;
+    /* margin-left: 45vw;
+    margin-top: 100vh; */
+    position: fixed;
+    left: 0;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
