@@ -10,6 +10,7 @@ import { StudentNavBarComponent } from './student/student-nav-bar/student-nav-ba
 import { StudentLoggedinComponent } from './student/student-loggedin/student-loggedin.component';
 import { PaymentAmtComponent } from './student/payment-amt/payment-amt.component';
 import { MenuComponent } from './Shared/menu/menu.component';
+import { StudentEditComponent } from './student/student-edit/student-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MenuComponent } from './Shared/menu/menu.component';
     StudentNavBarComponent,
     StudentLoggedinComponent,
     PaymentAmtComponent,
-    MenuComponent
+    MenuComponent,
+    StudentEditComponent
   ],
   imports: [
     BrowserModule,
