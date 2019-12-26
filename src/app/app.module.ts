@@ -9,6 +9,7 @@ import { StudentComponent } from './student/student.component';
 import { StudentNavBarComponent } from './student/student-nav-bar/student-nav-bar.component';
 import { StudentLoggedinComponent } from './student/student-loggedin/student-loggedin.component';
 import { PaymentAmtComponent } from './student/payment-amt/payment-amt.component';
+import { MenuComponent } from './Shared/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PaymentAmtComponent } from './student/payment-amt/payment-amt.component
     StudentComponent,
     StudentNavBarComponent,
     StudentLoggedinComponent,
-    PaymentAmtComponent
+    PaymentAmtComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
