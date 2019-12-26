@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-edit.component.css']
 })
 export class StudentEditComponent implements OnInit {
+  canEdit: boolean;
 
-  constructor() { }
+  constructor() { 
+    this.canEdit = false;
+  }
 
   ngOnInit() {
   }
 
+  enableStudentEdit()
+  {
+    this.canEdit = true;
+  }
 }

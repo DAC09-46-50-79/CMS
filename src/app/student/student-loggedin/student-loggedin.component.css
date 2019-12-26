@@ -14,12 +14,8 @@
     background-color: #dfe6e9;
 }
 
-.moveCheckBox{
-    margin-left: 45px;
-}
-
 #foodContainerTxt{
-    margin-left: 45vw;
+    margin-left: 44vw;
     margin-top: 15vh;
     margin-bottom: 20px;
     font-family: 'Arimo', sans-serif;
@@ -29,10 +25,11 @@
 
 label{
     font-size: 18px;
+    font-family: 'Arimo', sans-serif;
 }
 
 #submitBtn{
-    margin-left: 48.5vw;
+    margin-left: 47.5vw;
     margin-top: 12px;
     background-color: #005A7F;
 }

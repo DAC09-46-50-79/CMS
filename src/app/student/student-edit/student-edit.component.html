@@ -1,35 +1,37 @@
 <app-header></app-header>
 <app-student-nav-bar></app-student-nav-bar>
 
+
 <div id="container">
     <p id="userHeading">User Profile</p>
     <div id="imageCard" class="card" style="width: 12rem; ">
         <img class="card-img-top" src="../../../assets/images/default-profile-picture.png" alt="Card image cap">
-        <button class="btn" id="changePhoto">Change Photo</button>
+        <button class="btn" id="changePhoto" [disabled]="!canEdit">Change Photo</button>
     </div>
     
     <div id="formContainer">
-        <form>
             <div class="form-group">
               <label for="studName">Student Name</label>
               <input type="text" class="form-control" id="studName" disabled="true">
             </div>
-            
             <div class="form-group">
               <label for="studID">Student ID</label>
               <input type="password" class="form-control" id="studID" disabled="true"/>
             </div>
             <div class="form-group">
                 <label for="emailID">Email ID</label>
-                <input type="email" class="form-control" id="emailID">
+                <input type="email" class="form-control" id="emailID" [disabled]="!canEdit">
             </div>
             <div class="form-group">
                 <label for="phoneNumber">Phone Number</label>
-                <input type="email" class="form-control" id="phoneNumber">
+                <input type="email" class="form-control" id="phoneNumber" [disabled]="!canEdit">
             </div>
-            <button id="editBtn" class="btn btn-primary">Edit Profile</button>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" [disabled]="!canEdit">
+            </div>
+            <button id="editBtn" (click)="enableStudentEdit()" class="btn btn-primary">Edit Profile</button>
             <button id="saveBtn" type="submit" class="btn btn-primary">Save Profile</button>
-          </form>
     </div>
 </div>
 
