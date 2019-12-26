@@ -8,6 +8,7 @@ import { FooterComponent } from './Shared/footer/footer.component';
 import { StudentComponent } from './student/student.component';
 import { StudentNavBarComponent } from './student/student-nav-bar/student-nav-bar.component';
 import { StudentLoggedinComponent } from './student/student-loggedin/student-loggedin.component';
+import { PaymentAmtComponent } from './student/payment-amt/payment-amt.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StudentLoggedinComponent } from './student/student-loggedin/student-log
     FooterComponent,
     StudentComponent,
     StudentNavBarComponent,
-    StudentLoggedinComponent
+    StudentLoggedinComponent,
+    PaymentAmtComponent
   ],
   imports: [
     BrowserModule,

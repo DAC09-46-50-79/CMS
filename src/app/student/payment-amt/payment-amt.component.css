@@ -1,0 +1,18 @@
+#container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25vh;
+    max-width: 25%;
+}
+
+#paymentTxt{
+    margin-left: 6.5vw;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#paymentBtn{
+    background-color: #005A7F;
+    margin-left: 25%;
+}
