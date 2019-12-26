@@ -1,0 +1,26 @@
+<app-header></app-header>
+<app-student-nav-bar></app-student-nav-bar>
+<div id="walletInfoDisp">
+    <strong>Wallet Balance: {{ walletBalance }}</strong><br/>
+    <a href="#"><strong>Add money to wallet</strong></a>
+</div>
+<div id="foodContainer">
+    <p id="foodContainerTxt">Apply for food</p>
+    <div class="border border-primary" id="border">
+        <div class="custom-control custom-checkbox"> 
+            <input type="checkbox" class="custom-control-input moveCheckBox" id="defaultUnchecked1" name="a">
+            <label class="custom-control-label moveCheckBox"for="defaultUnchecked1" >Breakfast</label>
+            <input type="checkbox" class="custom-control-input moveCheckBox" id="defaultUnchecked2" name="a">
+            <label class="custom-control-label moveCheckBox" for="defaultUnchecked2">Lunch</label>
+            <input type="checkbox" class="custom-control-input moveCheckBox" id="defaultUnchecked3" name="a">
+            <label class="custom-control-label moveCheckBox" for="defaultUnchecked3">Tea/Coffee</label>
+            <input type="checkbox" class="custom-control-input moveCheckBox" id="defaultUnchecked4" name="a">
+            <label class="custom-control-label moveCheckBox" for="defaultUnchecked4">Tea/Coffee (E)</label>
+            <input type="checkbox" class="custom-control-input moveCheckBox" id="defaultUnchecked5" name="a">
+            <label class="custom-control-label moveCheckBox" for="defaultUnchecked5">Snacks</label>
+        </div>
+    </div>
+    <button id="submitBtn" class="btn btn-info">Submit</button>
+</div>
+
+

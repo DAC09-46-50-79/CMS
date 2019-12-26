@@ -7,6 +7,7 @@ import { HeaderComponent } from './Shared/header/header.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { StudentComponent } from './student/student.component';
 import { StudentNavBarComponent } from './student/student-nav-bar/student-nav-bar.component';
+import { StudentLoggedinComponent } from './student/student-loggedin/student-loggedin.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StudentNavBarComponent } from './student/student-nav-bar/student-nav-ba
     HeaderComponent,
     FooterComponent,
     StudentComponent,
-    StudentNavBarComponent
+    StudentNavBarComponent,
+    StudentLoggedinComponent
   ],
   imports: [
     BrowserModule,

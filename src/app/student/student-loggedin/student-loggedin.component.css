@@ -1,0 +1,38 @@
+#walletInfoDisp{
+    text-align: right;
+    padding: 4px;
+    font-family: 'Arimo', sans-serif;
+}
+
+#border{
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+    background-color: #dfe6e9;
+}
+
+.moveCheckBox{
+    margin-left: 45px;
+}
+
+#foodContainerTxt{
+    margin-left: 45vw;
+    margin-top: 15vh;
+    margin-bottom: 20px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+label{
+    font-size: 18px;
+}
+
+#submitBtn{
+    margin-left: 48.5vw;
+    margin-top: 12px;
+    background-color: #005A7F;
+}
