@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-menu',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  currentDate: Date;
 
-  constructor() { }
+  constructor() { 
+    this.currentDate = new Date();
+  }
 
   ngOnInit() {
   }
