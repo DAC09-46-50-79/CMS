@@ -1,7 +1,9 @@
+
 import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Shared/header/header.component';
 import { FooterComponent } from './Shared/footer/footer.component';
@@ -11,6 +13,12 @@ import { StudentLoggedinComponent } from './student/student-loggedin/student-log
 import { PaymentAmtComponent } from './student/payment-amt/payment-amt.component';
 import { MenuComponent } from './Shared/menu/menu.component';
 import { StudentEditComponent } from './student/student-edit/student-edit.component';
+
+const appRoutes: Routes = [
+  { path: 'menu', component: MenuComponent },
+  { path: 'student', component: StudentLoggedinComponent },
+  { path: 'student/profile', component: StudentEditComponent }
+];
 
 @NgModule({
   declarations: [
@@ -25,8 +33,9 @@ import { StudentEditComponent } from './student/student-edit/student-edit.compon
     StudentEditComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule, 
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

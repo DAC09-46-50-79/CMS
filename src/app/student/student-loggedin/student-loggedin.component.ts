@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentLoggedinComponent implements OnInit {
   walletBalance: number;
+  
   constructor() {
     this.walletBalance = 500;
-   }
+  }
 
   ngOnInit() {
   }
