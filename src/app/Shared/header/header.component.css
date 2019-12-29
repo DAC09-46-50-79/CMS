@@ -1,27 +1,27 @@
-#logo{
-    height: 11%;
-    width: 11%;
+#logo {
+  height: 9vh;
+  width: 11vw;
 }
 
-#banner
-{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background-color: #005A7F;
+#banner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  background-color: #005a7f;
 }
 
-#bannerTxt{
-    font-family: 'Merriweather', serif;
-    color: white;
-    font-size: 32px;
-    margin-left: 25%;
-    text-align: justify;
-
+#bannerTxt {
+  font-family: "Merriweather", serif;
+  color: white;
+  font-size: 36px;
+  letter-spacing: 5px;
+  word-spacing: 6px;
+  margin-left: 230px;
 }
 
-#navBar{
-    margin-top: 4.2%;
-    background-color: #dfe6e9;
+#navBar {
+  margin-top: 4.2%;
+  background-color: #dfe6e9;
 }
