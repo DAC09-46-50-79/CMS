@@ -1,0 +1,17 @@
+#container{
+    margin-top: 25vh;
+    margin-left: 12vw;
+    max-width: 80%;
+}
+
+#sidebar{
+    margin-top: 5%;
+}
+
+h3{
+    margin-left: 42%;
+}
+
+#paymentForm{
+    background-color: chartreuse;
+}

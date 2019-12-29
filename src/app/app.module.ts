@@ -18,6 +18,7 @@ import { PaymentHistoryComponent } from './student/payment-history/payment-histo
 import { UploadDetailsComponent } from './admin/upload-details/upload-details.component';
 import { HomeComponent } from './home/home.component';
 import { PaymentResultComponent } from './student/payment-result/payment-result.component';
+import { PaymentFormComponent } from './student/payment-form/payment-form.component';
 
 const appRoutes: Routes = [
   { path: 'menu', component: MenuComponent },
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
   { path: 'student/profile', component: StudentEditComponent },
   { path: 'stats', component: StatsComponent },
   { path: 'paymenthistory', component: PaymentHistoryComponent },
-  { path: 'adminLogin', component: UploadDetailsComponent }
+  { path: 'adminLogin', component: UploadDetailsComponent },
+  { path: 'payment', component: PaymentAmtComponent }
 ];
 
 @NgModule({
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     PaymentHistoryComponent,
     UploadDetailsComponent,
     HomeComponent,
-    PaymentResultComponent
+    PaymentResultComponent,
+    PaymentFormComponent
   ],
   imports: [
     BrowserModule, 
