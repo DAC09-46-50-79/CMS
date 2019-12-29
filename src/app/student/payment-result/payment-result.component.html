@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<div id="container">
+    <h2>Payment {{ outcomeMsg }}</h2>
+
+    <div id="successDetails" *ngIf="isSuccessful; else notSucessful">Amount added to wallet!</div>
+    <ng-template #notSucessful>
+        <span class="outcomeDetails">Please try again!</span>
+    </ng-template>
+</div>

@@ -17,6 +17,7 @@ import { StatsComponent } from './student/stats/stats.component';
 import { PaymentHistoryComponent } from './student/payment-history/payment-history.component';
 import { UploadDetailsComponent } from './admin/upload-details/upload-details.component';
 import { HomeComponent } from './home/home.component';
+import { PaymentResultComponent } from './student/payment-result/payment-result.component';
 
 const appRoutes: Routes = [
   { path: 'menu', component: MenuComponent },
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     StatsComponent,
     PaymentHistoryComponent,
     UploadDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    PaymentResultComponent
   ],
   imports: [
     BrowserModule, 
