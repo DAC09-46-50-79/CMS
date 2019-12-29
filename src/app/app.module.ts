@@ -13,11 +13,13 @@ import { StudentLoggedinComponent } from './student/student-loggedin/student-log
 import { PaymentAmtComponent } from './student/payment-amt/payment-amt.component';
 import { MenuComponent } from './Shared/menu/menu.component';
 import { StudentEditComponent } from './student/student-edit/student-edit.component';
+import { StatsComponent } from './student/stats/stats.component';
 
 const appRoutes: Routes = [
   { path: 'menu', component: MenuComponent },
   { path: 'student', component: StudentLoggedinComponent },
-  { path: 'student/profile', component: StudentEditComponent }
+  { path: 'student/profile', component: StudentEditComponent },
+  { path: 'stats', component: StatsComponent }
 ];
 
 @NgModule({
@@ -30,7 +32,8 @@ const appRoutes: Routes = [
     StudentLoggedinComponent,
     PaymentAmtComponent,
     MenuComponent,
-    StudentEditComponent
+    StudentEditComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule, 
