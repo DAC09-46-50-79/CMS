@@ -14,12 +14,17 @@ import { PaymentAmtComponent } from './student/payment-amt/payment-amt.component
 import { MenuComponent } from './Shared/menu/menu.component';
 import { StudentEditComponent } from './student/student-edit/student-edit.component';
 import { StatsComponent } from './student/stats/stats.component';
+import { PaymentHistoryComponent } from './student/payment-history/payment-history.component';
+import { UploadDetailsComponent } from './admin/upload-details/upload-details.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: 'menu', component: MenuComponent },
   { path: 'student', component: StudentLoggedinComponent },
   { path: 'student/profile', component: StudentEditComponent },
-  { path: 'stats', component: StatsComponent }
+  { path: 'stats', component: StatsComponent },
+  { path: 'paymenthistory', component: PaymentHistoryComponent },
+  { path: 'adminLogin', component: UploadDetailsComponent }
 ];
 
 @NgModule({
@@ -33,7 +38,10 @@ const appRoutes: Routes = [
     PaymentAmtComponent,
     MenuComponent,
     StudentEditComponent,
-    StatsComponent
+    StatsComponent,
+    PaymentHistoryComponent,
+    UploadDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule, 

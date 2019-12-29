@@ -1,0 +1,21 @@
+#container{
+    max-width: 60%;
+    margin-top: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fileUpload{
+    margin-top: 2%;
+    margin-left: 37%;
+}
+
+h3{
+    margin-left: 40%;
+}
+
+#uploadBtn{
+    margin-top: 4%;
+    margin-left: 45%;
+    background-color: #005A7F;
+}

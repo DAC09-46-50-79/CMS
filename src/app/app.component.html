@@ -1,12 +1,11 @@
 <app-header></app-header>
-
+<app-home></app-home>
 <!-- <app-student-loggedin *ngIf="isLoggedIn"></app-student-loggedin> -->
 
 <router-outlet></router-outlet>
-
 <div *ngIf="!isLoggedIn">
     <div id="linkContainer">
-        <a href="#"><strong>Admin Login</strong></a><br/>
+        <a routerLink="adminLogin"><strong>Admin Login</strong></a><br/>
         <a href="#"><strong>Canteen Manager Login</strong></a>
         </div>
         <div id="container">
@@ -21,6 +20,7 @@
             <p id="forgotText">Forgot password? Click <a href="#">here!</a> </p>
         </div>
 </div>
+
 <br/>
 <br/>
 <app-footer></app-footer>
