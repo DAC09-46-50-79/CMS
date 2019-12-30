@@ -6,10 +6,10 @@
         <div class="input-group-prepend">
           <span class="input-group-text">₹</span>
         </div>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest rupee)">
+        <input type="text" class="form-control" #amount>
         <div class="input-group-append">
           <span class="input-group-text">.00</span>
         </div>
     </div>
-    <button id="paymentBtn" class="btn btn-info">Proceed to Payment</button>
+    <button id="paymentBtn" (click)="proceedToPay(amount)" class="btn btn-info">Proceed to Payment</button>
 </div>

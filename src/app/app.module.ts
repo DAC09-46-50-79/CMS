@@ -1,3 +1,11 @@
+import { ShowUsersComponent } from './canteen-manager/show-users/show-users.component';
+import { CMLoggedIn } from './canteen-manager/CMLoggedIn/CMLoggedIn.component';
+import { CanteenNavBarComponent } from './canteen-manager/canteen-nav-bar/canteen-nav-bar.component';
+import { SearchStudentComponent } from './admin/search-student/search-student.component';
+import { SearchResultComponent } from './admin/search-result/search-result.component';
+import { AdminNavBarComponent } from './admin/admin-nav-bar/admin-nav-bar.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
@@ -19,15 +27,21 @@ import { UploadDetailsComponent } from './admin/upload-details/upload-details.co
 import { HomeComponent } from './home/home.component';
 import { PaymentResultComponent } from './student/payment-result/payment-result.component';
 import { PaymentFormComponent } from './student/payment-form/payment-form.component';
+import { CanteenManagerComponent } from './canteen-manager/canteen-manager.component';
 
 const appRoutes: Routes = [
+  { path: '', component: StudentComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'student', component: StudentLoggedinComponent },
+  { path: 'studentLogged', component: StudentLoggedinComponent },
   { path: 'student/profile', component: StudentEditComponent },
   { path: 'stats', component: StatsComponent },
   { path: 'paymenthistory', component: PaymentHistoryComponent },
-  { path: 'adminLogin', component: UploadDetailsComponent },
-  { path: 'payment', component: PaymentAmtComponent }
+  { path: 'adminLogin', component: AdminComponent },
+  { path: 'payment', component: PaymentAmtComponent },
+  { path: 'CMLogin', component: CanteenManagerComponent },
+  { path: 'paymentform', component: PaymentFormComponent },
+  { path: 'adminLogged', component: AdminLoginComponent },
+  { path: 'uploadDetails', component: UploadDetailsComponent }
 ];
 
 @NgModule({
@@ -46,7 +60,16 @@ const appRoutes: Routes = [
     UploadDetailsComponent,
     HomeComponent,
     PaymentResultComponent,
-    PaymentFormComponent
+    PaymentFormComponent,
+    AdminLoginComponent,
+    AdminComponent,
+    AdminNavBarComponent,
+    SearchResultComponent,
+    SearchStudentComponent,
+    CanteenNavBarComponent,
+    CanteenManagerComponent,
+    CMLoggedIn,
+    ShowUsersComponent
   ],
   imports: [
     BrowserModule, 

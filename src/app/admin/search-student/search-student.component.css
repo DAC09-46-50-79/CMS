@@ -1,0 +1,16 @@
+#container{
+    margin-top: 20vh;
+    margin-left: 35%;
+    margin-right: auto;
+    max-width: 25%;
+}
+
+#Txt{
+    margin-left: 26%;
+    margin-bottom: 25px;
+}
+
+#SearchBtn{
+    margin-left: 45%;
+    background-color: #005A7F;
+}

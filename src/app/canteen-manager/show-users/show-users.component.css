@@ -1,0 +1,44 @@
+#tableHeading{
+    margin-top: 5vh;
+    margin-left: 42vw;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#search{
+    max-width: 6cm;
+    margin-left: 78vw;
+    margin-top:3vh;
+
+} 
+
+#container{
+    max-width: 80%;
+    margin-top: 12vh;
+}
+
+#tableHead{
+    background-color: #005A7F;
+}
+
+th{
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+
+td{
+    text-align: center;
+}
+
+#table{
+    margin-left: 32%;
+}
+
+#selector{
+    margin-left: 40%;
+    margin-bottom: 2%;
+    /* background-color: aquamarine; */
+    max-width: 20%;
+}

@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div id="linkContainer">
+    <a routerLink="/"><strong>Student Login</strong></a><br/>
+    <a routerLink="/CMLogin"><strong>Canteen Manager Login</strong></a>
+  </div>
+  <div id="container">
+    <h3 id="loginTxt">Admin Login</h3>
+      <div class="form-group">
+        <input type="text" placeholder="Enter Admin ID" class="form-control" id="admID" #adminID/>
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Enter password" class="form-control" id="password" #adminPass>
+      </div>
+      <button id="loginBtn" (click)="validateEmployee(adminID, adminPass)" type="submit" class="btn btn-info">Login</button>
+      <p id="forgotText">Forgot password? Click <a href="#">here!</a> </p>
+</div>
