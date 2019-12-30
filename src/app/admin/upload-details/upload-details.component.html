@@ -1,6 +1,10 @@
 <div id="container">
     <h3>Upload Files</h3>
-    <input id="fileUpload" type="file"/>
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+        <div class="invalid-feedback">Example invalid custom file feedback</div>
+      </div>
     <br/>
     <button class="btn btn-info" id="uploadBtn">Upload</button>
 </div>

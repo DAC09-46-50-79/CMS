@@ -1,0 +1,92 @@
+<div *ngIf="isCCEnabled" id="container">
+    <div id="details" class="form-group">
+        <input type="text" placeholder="Enter Credit Card Number" class="form-control" id="ccNumber" /><br/>
+        <input type="text" placeholder="Enter Name on Card " class="form-control" id="ccName" /><br/>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="cc-exp" class="control-label mb-1">Expiration</label>
+                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" required placeholder="MM / YY" autocomplete="cc-exp">
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="x_card_code" class="control-label mb-1">CVV</label>
+                <div class="input-group">
+                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" required autocomplete="off">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fa fa-question-circle fa-lg" data-toggle="popover" data-container="body" data-html="true" data-title="Security Code" data-trigger="hover"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="paymentButton" type="submit" class="btn btn-lg btn-block">
+                    <i class="fa fa-lock fa-lg"></i>&nbsp;
+                    <span id="payment-button-amount">Pay</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isDCEnabled" id="container">
+    <div id="details" class="form-group">
+        <input type="text" placeholder="Enter Debit Card Number" class="form-control" id="dcNumber" /><br/>
+        <input type="text" placeholder="Enter Name on Card " class="form-control" id="dcName" /><br/>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="cc-exp" class="control-label mb-1">Expiration</label>
+                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" required placeholder="MM / YY" autocomplete="cc-exp">
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="x_card_code" class="control-label mb-1">CVV</label>
+                <div class="input-group">
+                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" required autocomplete="off">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fa fa-question-circle fa-lg" data-toggle="popover" data-container="body" data-html="true" data-title="Security Code" data-trigger="hover"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="paymentButton" type="submit" class="btn btn-lg btn-block">
+                    <i class="fa fa-lock fa-lg"></i>&nbsp;
+                    <span id="payment-button-amount">Pay</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isUPIEnabled" id="container">
+    <div id="details" class="form-group">
+        <input type="text" placeholder="Enter VPA" class="form-control" id="vpa" /><br/>
+        <div>
+            <button id="paymentButtonSmall" type="submit" class="btn btn-lg btn-block">
+                <i class="fa fa-lock fa-lg"></i>&nbsp;
+                <span id="payment-button-amount">Pay</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isWalletEnabled" id="container">
+    <div id="details" class="form-group">
+        <div class="custom-control custom-radio">
+            <input type="radio" id="paytm" name="wallet" class="custom-control-input">
+            <label class="custom-control-label" for="paytm">PayTM</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="amazonPay" name="wallet" class="custom-control-input">
+            <label class="custom-control-label" for="amazonPay">Amazon Pay</label>
+        </div>
+        <button id="paymentButtonSmall" type="submit" class="btn btn-lg btn-block">
+            <i class="fa fa-lock fa-lg"></i>&nbsp;
+            <span id="payment-button-amount">Pay</span>
+        </button>
+    </div>
+</div>

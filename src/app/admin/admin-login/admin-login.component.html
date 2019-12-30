@@ -1,8 +1,9 @@
 <app-header></app-header>
-<div id="loginBtn">
-    <button id="submitBtn" class="btn btn-info" (click)="uploadDetails()" class ="adminlogin"><b>Upload Academic Details</b></button><br>
-    <button id="submitBtn" class="btn btn-info" class ="adminlogin"><b>Search Students</b></button><br>
-    <button id="submitBtn" class="btn btn-info" class ="adminlogin"><b>View Today's Menu</b></button><br>
-    <button id="submitBtn" class="btn btn-info" class ="adminlogin"><b>View Registered User</b></button><br>
-    <button id="submitBtn" class="btn btn-info" class ="adminlogin"><b>View Payment History</b></button>
+<app-admin-nav-bar></app-admin-nav-bar>
+<div id="container">
+    <button id="uploadDetails" class="btn btn-info adminBtn" routerLink="/uploadDetails"><strong>Upload Academic Details</strong></button><br>
+    <button id="searchStud" class="btn btn-info adminBtn" routerLink="/searchStu"><strong>Search Students</strong></button><br>
+    <button id="menu" class="btn btn-info adminBtn" routerLink="/adminMenu"><strong>View Today's Menu</strong></button><br>
+    <button id="registeredUsers" class="btn btn-info adminBtn" routerLink="/viewUsersAdmin"><strong>View Registered User</strong></button><br>
+    <button id="paymentHistory" class="btn btn-info adminBtn" routerLink="/paymenthistoryadmin"><strong>View Payment History</strong></button>
 </div>

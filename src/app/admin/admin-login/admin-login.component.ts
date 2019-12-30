@@ -12,8 +12,5 @@ export class AdminLoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  uploadDetails(){
-    this.router.navigate(['/adminLogged']);
-  } 
+  
 }

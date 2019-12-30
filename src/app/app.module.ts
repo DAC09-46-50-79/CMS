@@ -1,3 +1,4 @@
+import { AdminPaymentComponent } from './admin/admin-payment/admin-payment.component';
 import { ShowUsersComponent } from './canteen-manager/show-users/show-users.component';
 import { CMLoggedIn } from './canteen-manager/CMLoggedIn/CMLoggedIn.component';
 import { CanteenNavBarComponent } from './canteen-manager/canteen-nav-bar/canteen-nav-bar.component';
@@ -28,6 +29,8 @@ import { HomeComponent } from './home/home.component';
 import { PaymentResultComponent } from './student/payment-result/payment-result.component';
 import { PaymentFormComponent } from './student/payment-form/payment-form.component';
 import { CanteenManagerComponent } from './canteen-manager/canteen-manager.component';
+import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
+import { ActualPaymentComponent } from './student/actual-payment/actual-payment.component';
 
 const appRoutes: Routes = [
   { path: '', component: StudentComponent },
@@ -39,9 +42,15 @@ const appRoutes: Routes = [
   { path: 'adminLogin', component: AdminComponent },
   { path: 'payment', component: PaymentAmtComponent },
   { path: 'CMLogin', component: CanteenManagerComponent },
-  { path: 'paymentform', component: PaymentFormComponent },
+  { path: 'paymentform', component: PaymentFormComponent, children:[
+    { path:'actualpayment/:id', component: ActualPaymentComponent }
+  ] },
   { path: 'adminLogged', component: AdminLoginComponent },
-  { path: 'uploadDetails', component: UploadDetailsComponent }
+  { path: 'uploadDetails', component: UploadDetailsComponent },
+  { path: 'searchStu', component: SearchStudentComponent },
+  { path: 'adminMenu', component: AdminMenuComponent },
+  { path: 'viewUsersAdmin', component: ShowUsersComponent },
+  { path: 'paymenthistoryadmin', component: AdminPaymentComponent }
 ];
 
 @NgModule({
@@ -69,7 +78,11 @@ const appRoutes: Routes = [
     CanteenNavBarComponent,
     CanteenManagerComponent,
     CMLoggedIn,
-    ShowUsersComponent
+    ShowUsersComponent,
+    AdminMenuComponent,
+    AdminPaymentComponent,
+    AdminNavBarComponent,
+    ActualPaymentComponent
   ],
   imports: [
     BrowserModule, 

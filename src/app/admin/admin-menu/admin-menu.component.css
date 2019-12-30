@@ -1,0 +1,31 @@
+#menuHeading{
+    margin-top: 18vh;
+    margin-left: 42vw;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+#container{
+    max-width: 80%;
+    margin-top: 12vh;
+}
+
+#tableHead{
+    background-color: #005A7F;
+}
+
+th{
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+
+td{
+    text-align: center;
+}
+
+#table{
+    margin-left: 27%;
+}
