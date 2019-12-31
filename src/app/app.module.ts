@@ -32,6 +32,7 @@ import { CanteenManagerComponent } from './canteen-manager/canteen-manager.compo
 import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
 import { ActualPaymentComponent } from './student/actual-payment/actual-payment.component';
 import { CMUploadMenuComponent } from './canteen-manager/cmupload-menu/cmupload-menu.component';
+import { PageNotFoundComponent } from './Shared/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: StudentComponent },
@@ -54,7 +55,9 @@ const appRoutes: Routes = [
   { path: 'paymenthistoryadmin', component: AdminPaymentComponent },
   { path: 'CMLogged', component: CMLoggedIn },
   { path: 'CMUpload', component: CMUploadMenuComponent },
-  { path: 'CMShow', component: ShowUsersComponent }
+  { path: 'CMShow', component: ShowUsersComponent },
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({
@@ -87,7 +90,8 @@ const appRoutes: Routes = [
     AdminNavBarComponent,
     ActualPaymentComponent,
     CMUploadMenuComponent,
-    ShowUsersComponent
+    ShowUsersComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule, 

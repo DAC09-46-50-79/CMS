@@ -1,0 +1,16 @@
+#container{
+    margin-top: 11%;
+    margin-left: 25vw;
+}
+
+#image{
+    max-width: 650px;
+    max-height: 620px;
+}
+
+h1{
+    margin-top: 4%;
+    margin-bottom: 0;
+    padding: 0;
+    margin-left: 18%;
+}
