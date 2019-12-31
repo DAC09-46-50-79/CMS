@@ -5,12 +5,55 @@
   </div>
   <div id="container">
     <h3 id="loginTxt">Admin Login</h3>
+    <form #form="ngForm" (ngSubmit)="loginAdmin(form)">
       <div class="form-group">
-        <input type="text" placeholder="Enter Admin ID" class="form-control" id="admID" #adminID/>
+        <input
+          required
+          minlength="12"
+          maxlength="12"
+          ngModel
+          name="adminID"
+          type="text"
+          placeholder="Enter Admin ID"
+          [class.is-invalid]="!adminID.valid && adminID.touched"
+          class="form-control"
+          id="admID"
+          #adminID="ngModel"
+        />
+      </div>
+      <div class="alert alert-danger" *ngIf="!adminID.valid && adminID.touched">
+        <div *ngIf="adminID.errors.required">Please enter admin ID</div>
+        <div *ngIf="adminID.errors.minlength">
+          Admin ID should be of minimum
+          {{ adminID.errors.minlength.requiredLength }} digits
+        </div>
       </div>
       <div class="form-group">
-        <input type="password" placeholder="Enter password" class="form-control" id="password" #adminPass>
+        <input
+          required
+          minlength="5"
+          maxlength="12"
+          ngModel
+          name="adminPass"
+          type="password"
+          placeholder="Enter password"
+          [class.is-invalid]="!adminPass.valid && adminPass.touched"
+          class="form-control"
+          id="password"
+          #adminPass="ngModel"
+        />
       </div>
-      <button id="loginBtn" (click)="validateEmployee(adminID, adminPass)" type="submit" class="btn btn-info">Login</button>
+      <div
+        class="alert alert-danger"
+        *ngIf="!adminPass.valid && adminPass.touched"
+      >
+        <div *ngIf="adminPass.errors.required">Please enter password</div>
+        <div *ngIf="adminPass.errors.minlength">
+          Minimum password length should be 
+          {{ adminPass.errors.minlength.requiredLength }}
+        </div>
+      </div>
+      <button id="loginBtn" class="btn btn-info">Login</button>
+    </form>
       <p id="forgotText">Forgot password? Click <a href="#">here!</a> </p>
 </div>

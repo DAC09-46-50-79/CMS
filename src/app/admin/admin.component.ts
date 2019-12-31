@@ -16,15 +16,16 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  validateEmployee(adminID: HTMLInputElement, adminPass: HTMLInputElement){ 
-    let adID = Number(adminID.value);
-    let adPass = adminPass.value;
+  loginAdmin(form) {
+    let adID = Number(form.value.adminID);
+    let adPass = form.value.adminPass;
     this.validation.validateAdmin(adID, adPass);
-    if(this.validation.isAdminLoggedIn){
-      this.router.navigate(['/adminLogged']);
+    if (this.validation.isAdminLoggedIn) {
+      this.router.navigate(["/adminLogged"]);
     }
     else{
       this.toastrSer.failedLogin("Incorrect ID or password!", "Invalid Credentials");
     }
   }
+  
 }

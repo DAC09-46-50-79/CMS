@@ -19,14 +19,15 @@ export class StudentComponent implements OnInit {
     this.loggedInStatus = false;
   }
 
-  validateStudent(studID: HTMLInputElement, studPass: HTMLInputElement){
-    let studentID = Number(studID.value);
-    let studentPass = studPass.value;
+  loginStudent(form) {
+    console.log(form);
+    console.log(form.value);
+    let studentID = Number(form.value.studID);
+    let studentPass = form.value.password;
     this.validation.validateStudent(studentID, studentPass);
-    if(this.validation.isStudentLoggedIn){
-      this.router.navigate(['/studentLogged']);
-    }
-    else{
+    if (this.validation.isStudentLoggedIn) {
+      this.router.navigate(["/studentLogged"]);
+    } else {
       this.toastrSer.failedLogin("Incorrect ID or password!", "Invalid Credentials");
     }
   }
