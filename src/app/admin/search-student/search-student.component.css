@@ -11,6 +11,14 @@
 }
 
 #SearchBtn{
-    margin-left: 45%;
+    margin-left: 40%;
     background-color: #005A7F;
+}
+
+h3{
+    margin-left: 19%;
+}
+
+.form-group{
+    margin-top: 5vh;
 }
