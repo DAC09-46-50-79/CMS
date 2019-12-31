@@ -1,3 +1,4 @@
+import { ToastrService } from './Shared/toastr.service';
 import { AdminPaymentComponent } from './admin/admin-payment/admin-payment.component';
 import { ShowUsersComponent } from './canteen-manager/show-users/show-users.component';
 import { CMLoggedIn } from './canteen-manager/CMLoggedIn/CMLoggedIn.component';
@@ -25,12 +26,12 @@ import { StudentEditComponent } from './student/student-edit/student-edit.compon
 import { StatsComponent } from './student/stats/stats.component';
 import { PaymentHistoryComponent } from './student/payment-history/payment-history.component';
 import { UploadDetailsComponent } from './admin/upload-details/upload-details.component';
-import { HomeComponent } from './home/home.component';
 import { PaymentResultComponent } from './student/payment-result/payment-result.component';
 import { PaymentFormComponent } from './student/payment-form/payment-form.component';
 import { CanteenManagerComponent } from './canteen-manager/canteen-manager.component';
 import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
 import { ActualPaymentComponent } from './student/actual-payment/actual-payment.component';
+import { CMUploadMenuComponent } from './canteen-manager/cmupload-menu/cmupload-menu.component';
 
 const appRoutes: Routes = [
   { path: '', component: StudentComponent },
@@ -50,7 +51,10 @@ const appRoutes: Routes = [
   { path: 'searchStu', component: SearchStudentComponent },
   { path: 'adminMenu', component: AdminMenuComponent },
   { path: 'viewUsersAdmin', component: ShowUsersComponent },
-  { path: 'paymenthistoryadmin', component: AdminPaymentComponent }
+  { path: 'paymenthistoryadmin', component: AdminPaymentComponent },
+  { path: 'CMLogged', component: CMLoggedIn },
+  { path: 'CMUpload', component: CMUploadMenuComponent },
+  { path: 'CMShow', component: ShowUsersComponent }
 ];
 
 @NgModule({
@@ -67,7 +71,6 @@ const appRoutes: Routes = [
     StatsComponent,
     PaymentHistoryComponent,
     UploadDetailsComponent,
-    HomeComponent,
     PaymentResultComponent,
     PaymentFormComponent,
     AdminLoginComponent,
@@ -82,14 +85,16 @@ const appRoutes: Routes = [
     AdminMenuComponent,
     AdminPaymentComponent,
     AdminNavBarComponent,
-    ActualPaymentComponent
+    ActualPaymentComponent,
+    CMUploadMenuComponent,
+    ShowUsersComponent
   ],
   imports: [
     BrowserModule, 
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

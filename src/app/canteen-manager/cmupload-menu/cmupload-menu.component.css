@@ -1,13 +1,24 @@
-#Dropdown{
-    margin-top: 30vh;
-    margin-left: 25%;
-    width:10cm;
-    background-color: #005A7F;
 
+#foodTable{
+    margin-top: 30vh;
+    margin-left: 30%;
+    width: 80%;
 }
-#Menu{
-    width: 30cm;
-    height: 30cm;
-    margin-top: 12vh;
-    margin-left: 22%;
+
+.tableHead{
+    font-size: large;
+    font-family: 'Arimo', sans-serif;
+}
+
+.text{
+    width: 10cm;
+    height: 2cm;
+    margin-left: 5%;
+}
+
+#submitBtn{
+    margin-top:5vh;
+    background-color:  #005A7F;
+    margin-left: 23%;
+
 }

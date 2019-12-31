@@ -1,3 +1,4 @@
+import { ToastrService } from './Shared/toastr.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(){
+  constructor(private toastrSer: ToastrService){
   }
+
 }

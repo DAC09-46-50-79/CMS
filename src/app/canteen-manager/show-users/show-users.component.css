@@ -1,5 +1,5 @@
 #tableHeading{
-    margin-top: 5vh;
+    margin-top: 3.5vh;
     margin-left: 42vw;
     font-weight: bold;
     font-size: 25px;
@@ -7,10 +7,9 @@
 
 #search{
     max-width: 6cm;
-    margin-left: 78vw;
+    margin-left: 63vw;
     margin-top:3vh;
-
-} 
+}
 
 #container{
     max-width: 80%;
@@ -27,7 +26,6 @@ th{
     text-align: center;
 }
 
-
 td{
     text-align: center;
 }
@@ -39,6 +37,8 @@ td{
 #selector{
     margin-left: 40%;
     margin-bottom: 2%;
-    /* background-color: aquamarine; */
     max-width: 20%;
+}
+#imageCard{
+    margin-left: 20%;
 }

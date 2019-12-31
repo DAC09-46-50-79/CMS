@@ -7,11 +7,11 @@
   <div id="container">
       <h3 id="loginTxt">Canteen Manager Login</h3>
         <div class="form-group">
-          <input type="text" placeholder="Enter your ID" class="form-control" id="studID" #studentID/>
+          <input type="text" placeholder="Enter your ID" class="form-control"  id="cmID" #CMID/>
         </div>
         <div class="form-group">
-          <input type="password" placeholder="Enter your password" class="form-control" id="password" #studentPass>
+          <input type="password" placeholder="Enter your password" class="form-control" id="password" #CMPass>
         </div>
-        <button id="loginBtn" type="submit" class="btn btn-info">Login</button>
+        <button id="loginBtn" (click)="validateCM(CMID,CMPass)" type="submit" class="btn btn-info">Login</button>
         <p id="forgotText">Forgot password? Click <a href="#">here!</a> </p>
   </div>

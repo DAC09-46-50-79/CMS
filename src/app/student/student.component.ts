@@ -1,3 +1,4 @@
+import { ToastrService } from './../Shared/toastr.service';
 import { Validation } from './../Shared/Validation.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,13 +13,13 @@ export class StudentComponent implements OnInit {
 
   loggedInStatus: boolean;
 
-  constructor(private validation: Validation, private router: Router) { }
+  constructor(private validation: Validation, private router: Router, private toastrSer: ToastrService) { }
 
   ngOnInit() {
     this.loggedInStatus = false;
   }
 
-  validate(studID: HTMLInputElement, studPass: HTMLInputElement){
+  validateStudent(studID: HTMLInputElement, studPass: HTMLInputElement){
     let studentID = Number(studID.value);
     let studentPass = studPass.value;
     this.validation.validateStudent(studentID, studentPass);
@@ -26,7 +27,7 @@ export class StudentComponent implements OnInit {
       this.router.navigate(['/studentLogged']);
     }
     else{
-      
+      this.toastrSer.failedLogin("Incorrect ID or password!", "Invalid Credentials");
     }
   }
 }
