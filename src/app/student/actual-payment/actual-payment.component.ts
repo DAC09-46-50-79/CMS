@@ -1,3 +1,4 @@
+import { ToastrService } from './../../Shared/toastr.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { __assign } from 'tslib';
@@ -14,7 +15,7 @@ export class ActualPaymentComponent implements OnInit {
   isWalletEnabled: boolean;
   currentPath: number;
 
-  constructor(private route: ActivatedRoute) { 
+  constructor(private route: ActivatedRoute, private toastrSer: ToastrService) { 
     this.isCCEnabled = false;
     this.isDCEnabled = false;
     this.isUPIEnabled = false;
@@ -31,6 +32,10 @@ export class ActualPaymentComponent implements OnInit {
     );
     this.assign();
   }
+
+  pay(){
+      this.toastrSer.paymentDone("Payment Successful!", "Thank you");
+   }
 
   assign(){
     if(this.currentPath == 1){
