@@ -1,17 +1,59 @@
-
-
 <div id="linkContainer">
     <a routerLink="/adminLogin"><strong>Admin Login</strong></a><br/>
     <a routerLink="/"><strong>Student Login</strong></a>
   </div>
   <div id="container">
       <h3 id="loginTxt">Canteen Manager Login</h3>
+      <form #form="ngForm" (ngSubmit)="validateCM(form)">
         <div class="form-group">
-          <input type="text" placeholder="Enter your ID" class="form-control"  id="cmID" #CMID/>
+          <input
+            required
+            minlength="12"
+            maxlength="12"
+            ngModel
+            name="cmID"
+            type="text"
+            placeholder="Enter your ID"
+            [class.is-invalid]="CMID.touched && !CMID.valid"
+            class="form-control"
+            id="cmID"
+            #CMID="ngModel"
+          />
+        </div>
+        <div class="alert alert-danger" *ngIf="CMID.touched && !CMID.valid">
+          <div *ngIf="CMID.errors.required">Please enter canteen manager ID</div>
+          <div *ngIf="CMID.errors.minlength">
+            Canteen manager ID should be of
+            {{ CMID.errors.minlength.requiredLength }} digits
+          </div>
         </div>
         <div class="form-group">
-          <input type="password" placeholder="Enter your password" class="form-control" id="password" #CMPass>
+          <input
+            required
+            minlength="5"
+            maxlength="12"
+            ngModel
+            name="password"
+            type="password"
+            placeholder="Enter your password"
+            [class.is-invalid]="CMPass.touched && !CMPass.valid"
+            class="form-control"
+            id="password"
+            #CMPass="ngModel"
+          />
         </div>
-        <button id="loginBtn" (click)="validateCM(CMID,CMPass)" type="submit" class="btn btn-info">Login</button>
+        <div class="alert alert-danger" *ngIf="CMPass.touched && !CMPass.valid">
+          <div *ngIf="CMPass.errors.required">Please enter password</div>
+          <div *ngIf="CMPass.errors.minlength">
+            Minimum length of password should be {{ CMPass.errors.minlength.requiredLength }}
+          </div>
+        </div>
+        <button
+          id="loginBtn"
+          class="btn btn-info"
+        >
+          Login
+        </button>
+      </form>
         <p id="forgotText">Forgot password? Click <a href="#">here!</a> </p>
   </div>

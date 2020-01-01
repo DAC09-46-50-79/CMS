@@ -1,36 +1,90 @@
 <app-header></app-header>
 <app-student-nav-bar></app-student-nav-bar>
 <div id="walletInfoDisp">
-    <strong>Wallet Balance: {{ walletBalance }}</strong><br/>
-    <a routerLink="/payment"><strong>Add money to wallet</strong></a>
+  <strong>Wallet Balance: {{ walletBalance }}</strong
+  ><br />
+  <a routerLink="/payment"><strong>Add money to wallet</strong></a>
 </div>
+
 <div id="foodContainer">
-    <p id="foodContainerTxt">Apply for food</p>
+  <p id="foodContainerTxt">Apply for food</p>
+  <form #form="ngForm" (ngSubmit)="registerFood(form)">
     <div class="border border-primary" id="border">
-        <div class="custom-control custom-checkbox"> 
-            <div class="custom-control custom-checkbox custom-control-inline">
-                <input type="checkbox" class="custom-control-input" [(ngModel)] = "breakfastCB" id="breakfastCB">
-                <label class="custom-control-label" for="breakfastCB">Breakfast</label>
-            </div>
-            <div class="custom-control custom-checkbox custom-control-inline">
-                <input type="checkbox" class="custom-control-input checkboxInp" id="lunchCB">
-                <label class="custom-control-label" for="lunchCB">Lunch</label>
-            </div>
-            <div class="custom-control custom-checkbox custom-control-inline">
-                <input type="checkbox" class="custom-control-input checkboxInp" id="teacoffeeCB">
-                <label class="custom-control-label" for="teacoffeeCB">Tea/Coffee</label>
-            </div>
-            <div class="custom-control custom-checkbox custom-control-inline">
-                <input type="checkbox" class="custom-control-input checkboxInp" id="teacoffeeECB">
-                <label class="custom-control-label" for="teacoffeeECB">Tea/Coffee (E)</label>
-            </div>
-            <div class="custom-control custom-checkbox custom-control-inline">
-                <input type="checkbox" class="custom-control-input checkboxInp" id="snacksCB">
-                <label class="custom-control-label" for="snacksCB">Snacks</label>
-            </div>
+      <div class="custom-control custom-checkbox">
+        <div
+          class="form-group custom-control custom-checkbox custom-control-inline "
+        >
+          <input
+            type="checkbox"
+            class="custom-control-input checkboxInp"
+            id="breakfastCB"
+            name="breakfastCB"
+            ngModel
+          />
+          <label class="custom-control-label" for="breakfastCB"
+            >Breakfast</label
+          >
         </div>
+
+        <div
+          class="form-group custom-control custom-checkbox custom-control-inline "
+        >
+          <input
+            type="checkbox"
+            class="custom-control-input checkboxInp"
+            id="lunchCB"
+            name="lunchCB"
+            ngModel
+          />
+          <label class="custom-control-label" for="lunchCB">Lunch</label>
+        </div>
+
+        <div
+          class="form-group custom-control custom-checkbox custom-control-inline"
+        >
+          <input
+            type="checkbox"
+            class="custom-control-input checkboxInp"
+            id="teacoffeeCB"
+            name="teacoffeeCB"
+            ngModel
+          />
+          <label class="custom-control-label" for="teacoffeeCB"
+            >Tea/Coffee</label
+          >
+        </div>
+
+        <div
+          class="form-group custom-control custom-checkbox custom-control-inline"
+        >
+          <input
+            type="checkbox"
+            class="custom-control-input checkboxInp"
+            id="teacoffeeECB"
+            name="teacoffeeECB"
+            ngModel
+          />
+          <label class="custom-control-label" for="teacoffeeECB"
+            >Tea/Coffee (E)</label
+          >
+        </div>
+
+        <div
+          class=" form-group custom-control custom-checkbox custom-control-inline"
+        >
+          <input
+            type="checkbox"
+            class="custom-control-input checkboxInp"
+            id="snacksCB"
+            name="snacksCB"
+            ngModel
+          />
+          <label class="custom-control-label" for="snacksCB">Snacks</label>
+        </div>
+      </div>
     </div>
-    <button id="submitBtn" (onclick)="registerFood()" class="btn btn-info">Submit</button>
+    <button id="submitBtn" class="btn btn-info">
+      Submit
+    </button>
+  </form>
 </div>
-
-

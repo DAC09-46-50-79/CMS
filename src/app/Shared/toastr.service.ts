@@ -18,6 +18,10 @@ export class ToastrService {
     toastr["success"](message, title);
   }
 
+  foodRegistered(message: string, title?: string){
+    toastr["success"](message, title);
+  }
+
   setting(){
     
     toastr.options = {

@@ -18,11 +18,10 @@ export class CanteenManagerComponent implements OnInit {
     
 
   }
-
-  
-  validateCM(CMID:HTMLInputElement,CMPass:HTMLInputElement){
-    let cmID = Number(CMID.value);
-    let cmPass = CMPass.value;
+  validateCM(form){
+    let cmID = Number(form.value.cmID);
+    let cmPass = form.value.password;
+    console.log(cmID +" "+ cmPass);
     this.validation.validateCM(cmID, cmPass);
     if(this.validation.isCMLoggedIn){
       this.router.navigate(['/CMLogged']);

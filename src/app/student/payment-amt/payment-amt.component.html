@@ -2,14 +2,27 @@
 <app-student-nav-bar></app-student-nav-bar>
 <div id="container">
     <p id="paymentTxt">Enter amount</p>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">₹</span>
+
+    <form #form="ngForm" (ngSubmit)="proceedToPay(form)">
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">₹</span>
+          </div>
+          <input required ngModel name="amt" id="amt" type="text" class="form-control" #amount="ngModel" [class.is-invalid]="(!amount.valid && amount.touched) || (amount.valid && +(1 > amount.value) && amount.touched)" >
+          <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+          </div>
+          <div class="alert alert-danger" *ngIf="(!amount.valid && amount.touched)">
+            <div *ngIf="amount.errors.required">Please enter the amount</div>
+          </div>
+          <div class="alert alert-danger" *ngIf="(amount.valid && amount.touched && +(1 > amount.value))">
+            <div *ngIf="+(1 > amount.value) ">Amount should be greater than 0</div>
+          </div>
+          
+          <button id="paymentBtn" type="submit" class="btn btn-info">Proceed to Payment</button>
         </div>
-        <input type="text" class="form-control" #amount>
-        <div class="input-group-append">
-          <span class="input-group-text">.00</span>
-        </div>
-    </div>
-    <button id="paymentBtn" (click)="proceedToPay(amount)" class="btn btn-info">Proceed to Payment</button>
+      </div>
+    </form>
+    
 </div>

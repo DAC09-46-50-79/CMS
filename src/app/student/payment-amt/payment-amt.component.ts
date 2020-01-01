@@ -1,6 +1,7 @@
 import { Payment } from './../../Shared/payment.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Form } from '@angular/forms';
 
 @Component({
   selector: 'app-payment-amt',
@@ -15,9 +16,8 @@ export class PaymentAmtComponent implements OnInit {
   ngOnInit() {
   }
 
-  proceedToPay(amount: HTMLInputElement){
-    this.paymentService.paymentAmount = Number(amount.value);
-    console.log(amount);
+  proceedToPay(form){
+    this.paymentService.paymentAmount = +(form.value.amt);
     this.router.navigate(['/paymentform']);
   }
 }

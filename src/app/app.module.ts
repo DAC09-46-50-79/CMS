@@ -1,3 +1,4 @@
+import { Validation } from './Shared/Validation.service';
 import { ToastrService } from './Shared/toastr.service';
 import { AdminPaymentComponent } from './admin/admin-payment/admin-payment.component';
 import { ShowUsersComponent } from './canteen-manager/show-users/show-users.component';
@@ -98,7 +99,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ToastrService],
+  providers: [ToastrService, Validation],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
