@@ -1,7 +1,9 @@
 export class Food{
-    breakfast: boolean;
-    lunch: boolean;
-    teaCoffee: boolean;
-    teaCoffeeE: boolean;
-    snacks: boolean;
+    Date: string;
+    Stud_ID: number;
+    Breakfast: number;
+    Lunch: number;
+    TeaCoffee: number;
+    TeaCoffeeE: number;
+    Snacks: number;
 }

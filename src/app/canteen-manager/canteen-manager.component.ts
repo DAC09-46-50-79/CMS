@@ -21,13 +21,12 @@ export class CanteenManagerComponent implements OnInit {
   validateCM(form){
     let cmID = Number(form.value.cmID);
     let cmPass = form.value.password;
-    console.log(cmID +" "+ cmPass);
     this.validation.validateCM(cmID, cmPass);
     if(this.validation.isCMLoggedIn){
       this.router.navigate(['/CMLogged']);
     }
     else{
-      this.toastrServ.failedLogin("Incorrect ID or password", "Invalid Credentials");
+      this.toastrServ.Error("Incorrect ID or password", "Invalid Credentials");
     }
   }
 }

@@ -11,14 +11,10 @@ export class ToastrService {
     this.setting();
    }
 
-  failedLogin(message: string, title?: string){
+  Error(message: string, title?: string){
     toastr["error"](message, title);
   }
-  paymentDone(message: string, title?: string){
-    toastr["success"](message, title);
-  }
-
-  foodRegistered(message: string, title?: string){
+  Success(message: string, title?: string){
     toastr["success"](message, title);
   }
 

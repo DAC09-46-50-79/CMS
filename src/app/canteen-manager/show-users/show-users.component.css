@@ -1,19 +1,17 @@
 #tableHeading{
     margin-top: 3.5vh;
-    margin-left: 42vw;
+    margin-left: 38vw;
     font-weight: bold;
     font-size: 25px;
 }
 
-#search{
-    max-width: 6cm;
-    margin-left: 63vw;
-    margin-top:3vh;
+#searchBox{
+    margin-left: 38.3vw;
 }
 
 #container{
     max-width: 80%;
-    margin-top: 12vh;
+    margin-top: 10vh;
 }
 
 #tableHead{
@@ -35,10 +33,11 @@ td{
 }
 
 #selector{
-    margin-left: 40%;
+    margin-left: 32%;
     margin-bottom: 2%;
     max-width: 20%;
 }
+
 #imageCard{
     margin-left: 20%;
 }

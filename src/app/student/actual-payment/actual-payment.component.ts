@@ -34,7 +34,7 @@ export class ActualPaymentComponent implements OnInit {
   }
 
   pay(){
-      this.toastrSer.paymentDone("Payment Successful!", "Thank you");
+      this.toastrSer.Success("Payment Successful!", "Thank you");
    }
 
   assign(){

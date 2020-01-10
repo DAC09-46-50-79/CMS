@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Validation } from './Shared/Validation.service';
 import { ToastrService } from './Shared/toastr.service';
 import { AdminPaymentComponent } from './admin/admin-payment/admin-payment.component';
@@ -34,6 +35,7 @@ import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
 import { ActualPaymentComponent } from './student/actual-payment/actual-payment.component';
 import { CMUploadMenuComponent } from './canteen-manager/cmupload-menu/cmupload-menu.component';
 import { PageNotFoundComponent } from './Shared/page-not-found/page-not-found.component';
+import { DatePipe } from '@angular/common';
 
 const appRoutes: Routes = [
   { path: '', component: StudentComponent },
@@ -95,11 +97,12 @@ const appRoutes: Routes = [
     PageNotFoundComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule, 
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ToastrService, Validation],
+  providers: [ToastrService, Validation, HttpClient, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

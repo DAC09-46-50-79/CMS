@@ -7,8 +7,7 @@ import { Form } from '@angular/forms';
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
-  styleUrls: ['./student.component.css'],
-  providers: [Validation]
+  styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
 
@@ -25,7 +24,7 @@ export class StudentComponent implements OnInit {
     if (this.validation.isStudentLoggedIn) {
       this.router.navigate(["/studentLogged"]);
     } else {
-      this.toastrSer.failedLogin("Incorrect ID or password!", "Invalid Credentials");
+      this.toastrSer.Error("Incorrect ID or password!", "Invalid Credentials");
     }
   }
 }

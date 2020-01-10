@@ -24,7 +24,7 @@ export class AdminComponent implements OnInit {
       this.router.navigate(["/adminLogged"]);
     }
     else{
-      this.toastrSer.failedLogin("Incorrect ID or password!", "Invalid Credentials");
+      this.toastrSer.Error("Incorrect ID or password!", "Invalid Credentials");
     }
   }
   

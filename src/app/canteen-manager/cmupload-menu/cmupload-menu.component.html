@@ -4,21 +4,21 @@
   <thead>
     <tr>
      <th> <span class="tableHead"> Breakfast </span></th> 
-     <td> <textarea class="text"></textarea></td> 
+     <td> <textarea [(ngModel)]="breakfast" class="text"></textarea></td> 
     </tr>
 
     <tr>
      <th > <span class="tableHead">Lunch</span> </th> 
-     <td> <textarea class="text"></textarea></td> 
+     <td> <textarea [(ngModel)]="lunch" class="text"></textarea></td> 
     </tr>
 
     <tr>  
      <th> <span class="tableHead"> Snacks</span></th> 
-     <td> <textarea class="text"></textarea> </td> 
+     <td> <textarea [(ngModel)]="snacks" class="text"></textarea> </td> 
     </tr>     
   </thead>
 </table>
-<button id="submitBtn"  type="submit" class="btn btn-info">Submit</button>
+<button id="submitBtn" (click)="uploadMenu()" type="submit" class="btn btn-info">Submit</button>
 
 </div>
 
