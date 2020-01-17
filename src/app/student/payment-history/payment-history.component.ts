@@ -1,3 +1,6 @@
+import { Validation } from './../../Shared/Validation.service';
+import { PaymentService } from 'src/app/paymentdata.service';
+import { AllPayments } from './../../Shared/Models/AllPayments.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentHistoryComponent implements OnInit {
 
-  constructor() { }
+  allPayments: AllPayments[];
+  allPaymentOfStud: AllPayments[];
 
-  ngOnInit() {
+  constructor(private paymentService: PaymentService, private validation: Validation) { 
+   
   }
 
+  ngOnInit() {
+    this.allPayments = [];
+    this.allPaymentOfStud = [];
+
+    this.paymentService.getAllPayments().subscribe(
+      (data)=>{
+        for(let i = 0; i < data.length; i++){
+          this.allPayments[i] = data[i];
+        }
+        this.populateArr();
+      }
+    );
+  }
+
+  populateArr(){
+    for(let i= 0; i < this.allPayments.length; i++){
+      if(this.allPayments[i].Stud_ID == this.validation.currentStudent){
+        this.allPaymentOfStud.push(this.allPayments[i]);
+      }
+    }
+  }
 }

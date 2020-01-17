@@ -1,3 +1,9 @@
+import { Injectable } from '@angular/core';
+
+
+@Injectable({
+    providedIn : 'root'
+})
 export class Validation{
     isStudentLoggedIn: boolean;
     isAdminLoggedIn: boolean;
@@ -14,7 +20,6 @@ export class Validation{
     }
 
     validateStudent(studID: number, studPass: string){
-        console.log(studID+" "+ studPass);
         if(studID == 1 && studPass == 'admin'){
             this.isStudentLoggedIn  = true;
             this.currentStudent = studID;

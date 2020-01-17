@@ -1,17 +1,16 @@
-import { Payment } from './../../Shared/payment.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Form } from '@angular/forms';
+import { PaymentService } from 'src/app/paymentdata.service';
+
 
 @Component({
   selector: 'app-payment-amt',
   templateUrl: './payment-amt.component.html',
-  styleUrls: ['./payment-amt.component.css'],
-  providers: [Payment]
+  styleUrls: ['./payment-amt.component.css']
 })
 export class PaymentAmtComponent implements OnInit {
 
-  constructor(private router: Router, private paymentService: Payment) { }
+  constructor(private router: Router, private paymentService: PaymentService) { }
 
   ngOnInit() {
   }

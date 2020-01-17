@@ -2,47 +2,51 @@
 <app-admin-nav-bar></app-admin-nav-bar>
 <div id="headerContainer">
   <h3>Payment History</h3>
-  <div id="studIDBox"class="form-group">
-    <input type="text" class="form-control" placeholder="Enter Student ID" id="studentID">
+  <div id="formContainer">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Enter Student ID" [(ngModel)]="stud_ID">
+      </div>
+      <div class="col">
+        <select class="custom-select form-control" [(ngModel)]="month">
+          <option>Select Month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+       </select>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" (click)="showRes()">Search</button>
+      </div>
+    </div>
   </div>
-  <span id="datepicker">
-    <input type="date" name="bday">
-    <input type="submit">
-  </span>
 </div>
     <div id="container">
-        <h3 id="paymentTxt"><b>Month:-</b>August</h3>
+        <h3 id="paymentTxt">Month:  {{ monthText }}</h3>
         <table class="table">
             <thead class="thead">
               <tr>
                 <th scope="col">Payment ID</th>
                 <th scope="col">Payment Date (DD/MM/YYYY)</th>
                 <th scope="col">Payment Type</th>
-                <th scope="col">Account no.</th>
                 <th scope="col">Amount</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>SBI4268763724</td>
-                <td>22/05/2019</td>
-                <td>UPI</td>
-                <td>21XXXXXXXXX78</td>
-                <td>1200</td>
-              </tr>
-              <tr>
-                <td>HDFC473927478</td>
-                <td>16/07/2018</td>
-                <td>Credit Card</td>
-                <td>26XXXXXXXXX45</td>
-                <td>300</td>
-              </tr>
-              <tr>
-                <td>ICICI3284677</td>
-                <td>31/01/2017</td>
-                <td>Debit Card</td>
-                <td>31XXXXXXXXX10</td>
-                <td>1200</td>
+              <tr *ngFor="let payment of allPaymentInMonthOfStud">
+                <td>{{ payment.Payment_ID }}</td>
+                <td>{{ payment.Date | date: 'yyyy-MM-dd'}}</td>
+                <td>{{ payment.Payment_Type }}</td>
+                <td>{{ payment.Amount }}</td>
               </tr>
             </tbody>
           </table>

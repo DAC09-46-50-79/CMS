@@ -1,5 +1,4 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Validation } from './Shared/Validation.service';
 import { ToastrService } from './Shared/toastr.service';
 import { AdminPaymentComponent } from './admin/admin-payment/admin-payment.component';
 import { ShowUsersComponent } from './canteen-manager/show-users/show-users.component';
@@ -102,7 +101,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ToastrService, Validation, HttpClient, DatePipe],
+  providers: [ToastrService, HttpClient, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

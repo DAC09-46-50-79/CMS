@@ -9,8 +9,7 @@ import { Form } from '@angular/forms';
 @Component({
   selector: 'app-show-users',
   templateUrl: './show-users.component.html',
-  styleUrls: ['./show-users.component.css'],
-  providers: [RegisterFood, Students]
+  styleUrls: ['./show-users.component.css']
 })
 export class ShowUsersComponent implements OnInit {
   todayDate: string;

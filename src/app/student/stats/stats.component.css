@@ -4,11 +4,14 @@
 }
 
 #container{
-    font-weight: 700;
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 12vh;
+    margin-top: 10vh;
+}
+
+.custom-select{
+    max-width: 15%;
 }
 
 #tableHead{

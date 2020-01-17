@@ -12,6 +12,12 @@
     margin-right: auto;
 }
 
+#breadcrumb{
+    margin-left: 28%;
+    max-width: 50%;
+    margin-top: 4%;
+}
+
 #editBtn{
     background-color: #005A7F;
     margin-left: 5vw;

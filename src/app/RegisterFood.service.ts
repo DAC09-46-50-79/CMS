@@ -3,7 +3,9 @@ import { Observable } from 'rxjs';
 import { Food } from 'src/app/Shared/Models/food.model';
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class RegisterFood{
 
     constructor(private http: HttpClient) {
