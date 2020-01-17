@@ -1,17 +1,20 @@
 #tableHeading{
     margin-top: 3.5vh;
-    margin-left: 38vw;
     font-weight: bold;
     font-size: 25px;
+    margin-left: 25%;
 }
 
 #searchBox{
-    margin-left: 38.3vw;
+    margin-left: 52vw;
+    max-width: 20%;
+    margin-bottom: 2%;
 }
 
 #container{
-    max-width: 80%;
+    max-width: 65%;
     margin-top: 10vh;
+    margin-left: 20%;
 }
 
 #tableHead{
@@ -28,13 +31,8 @@ td{
     text-align: center;
 }
 
-#table{
-    margin-left: 32%;
-}
 
 #selector{
-    margin-left: 32%;
-    margin-bottom: 2%;
     max-width: 20%;
 }
 

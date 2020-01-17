@@ -1,26 +1,29 @@
-
-<div id="foodTable">
-<table>
-  <thead>
-    <tr>
-     <th> <span class="tableHead"> Breakfast </span></th> 
-     <td> <textarea [(ngModel)]="breakfast" class="text"></textarea></td> 
-    </tr>
-
-    <tr>
-     <th > <span class="tableHead">Lunch</span> </th> 
-     <td> <textarea [(ngModel)]="lunch" class="text"></textarea></td> 
-    </tr>
-
-    <tr>  
-     <th> <span class="tableHead"> Snacks</span></th> 
-     <td> <textarea [(ngModel)]="snacks" class="text"></textarea> </td> 
-    </tr>     
-  </thead>
-</table>
-<button id="submitBtn" (click)="uploadMenu()" type="submit" class="btn btn-info">Submit</button>
-
+<app-canteen-nav-bar></app-canteen-nav-bar>
+<div id="container">
+  <div id="foodTable">
+    <nav id="breadcrumb" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/CMLogged">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Menu Upload</li>
+      </ol>
+    </nav>
+    <table>
+      <thead>
+        <tr>
+        <th> <span class="tableHead">Breakfast</span></th> 
+        <td> <textarea [(ngModel)]="breakfast" class="text"></textarea></td> 
+        </tr>
+        <tr>
+        <th > <span class="tableHead">Lunch</span> </th> 
+        <td> <textarea [(ngModel)]="lunch" class="text"></textarea></td> 
+        </tr>
+        <tr>  
+        <th> <span class="tableHead">Snacks</span></th> 
+        <td> <textarea [(ngModel)]="snacks" class="text"></textarea> </td> 
+        </tr>     
+      </thead>
+    </table>
+    <small id="menuHelp" class="form-text text-muted">Please enter the menu items separated by commas.</small>
+    <button id="submitBtn" (click)="uploadMenu()" type="submit" class="btn btn-info">Submit</button>
+  </div>
 </div>
-
-
-
