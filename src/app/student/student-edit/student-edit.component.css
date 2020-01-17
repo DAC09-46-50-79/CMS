@@ -20,12 +20,13 @@
 
 #editBtn{
     background-color: #005A7F;
-    margin-left: 5vw;
+    margin-left: 7%;
     margin-right: 20px;
 }
 
 #saveBtn{
     background-color: #005A7F;
+    margin-left: 16%;
 }
 
 #changePhoto{

@@ -27,7 +27,6 @@ import { StudentEditComponent } from './student/student-edit/student-edit.compon
 import { StatsComponent } from './student/stats/stats.component';
 import { PaymentHistoryComponent } from './student/payment-history/payment-history.component';
 import { UploadDetailsComponent } from './admin/upload-details/upload-details.component';
-import { PaymentResultComponent } from './student/payment-result/payment-result.component';
 import { PaymentFormComponent } from './student/payment-form/payment-form.component';
 import { CanteenManagerComponent } from './canteen-manager/canteen-manager.component';
 import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
@@ -76,7 +75,6 @@ const appRoutes: Routes = [
     StatsComponent,
     PaymentHistoryComponent,
     UploadDetailsComponent,
-    PaymentResultComponent,
     PaymentFormComponent,
     AdminLoginComponent,
     AdminComponent,

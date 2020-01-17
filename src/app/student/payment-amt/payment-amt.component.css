@@ -1,8 +1,15 @@
 #container{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25vh;
+    margin-top: 8vh;
     max-width: 25%;
+}
+
+#breadcrumb{
+    max-width: 50%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #paymentTxt{
@@ -14,8 +21,8 @@
 
 #paymentBtn{
     background-color: #005A7F;
-    margin-top: 10px;
-    margin-left: 27%;
+    margin-top: 18px;
+    margin-left: 26%;
 }
 
 .alert{
