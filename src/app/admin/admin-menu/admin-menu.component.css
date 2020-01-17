@@ -1,14 +1,18 @@
 #menuHeading{
-    margin-top: 18vh;
+    margin-top: 7vh;
     margin-left: 42vw;
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 25px;
 }
 
+#breadcrumb{
+    margin-left: 28%;
+}
+
 #container{
     max-width: 80%;
-    margin-top: 12vh;
+    margin-top: 10vh;
 }
 
 #tableHead{

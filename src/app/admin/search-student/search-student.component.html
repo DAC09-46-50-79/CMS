@@ -1,11 +1,17 @@
 
 <app-admin-nav-bar></app-admin-nav-bar>
 
+<nav id="breadcrumb" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/adminLogged">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Search Students</li>
+    </ol>
+</nav>
 <div id="container">
-    <h3 id="studId">Enter Student ID</h3>
+    <h3>Enter Student ID</h3>
     <div class="form-group">
-        <input type="text" id="txt"  class="form-control"/>
+        <input type="text" id="txtBox" class="form-control"/>
     </div>
-
     <button id="SearchBtn" type="submit" class="btn btn-info">Search</button>
+</div>
   

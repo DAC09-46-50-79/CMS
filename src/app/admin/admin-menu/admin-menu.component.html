@@ -1,26 +1,32 @@
 <app-header></app-header>
 <app-admin-nav-bar></app-admin-nav-bar>
-    <div id="container">
-        <h3 id="menuHeading">Menu {{ currentDate | date:'dd-MM-yyyy' }}</h3>
-        <div id="table">
-            <table class="table table-striped table-bordered table-hover">
-                <thead id="tableHead" class="thead">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Breakfast</th>
-                    <th scope="col">Lunch</th>
-                    <th scope="col">Snacks</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let item of largestArr; let i = index;">
-                    <td><strong>{{ i+1 }}</strong></td>
-                    <td>{{ breakfastArr[i] }}</td>
-                    <td>{{ lunchArr[i] }}</td>
-                    <td>{{ snacksArr[i] }}</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
+  <div id="container">
+    <nav id="breadcrumb" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/adminLogged">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Menu</li>
+      </ol>
+    </nav>
+    <h3 id="menuHeading">Menu {{ todayDate | date:'dd-MM-yyyy' }}</h3>
+    <div id="table">
+        <table class="table table-striped table-bordered table-hover">
+            <thead id="tableHead" class="thead">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Breakfast</th>
+                <th scope="col">Lunch</th>
+                <th scope="col">Snacks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of largestArr; let i = index;">
+                <td><strong>{{ i+1 }}</strong></td>
+                <td>{{ breakfastArr[i] }}</td>
+                <td>{{ lunchArr[i] }}</td>
+                <td>{{ snacksArr[i] }}</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
+  </div>
 <app-footer></app-footer>
