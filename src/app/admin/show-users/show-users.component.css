@@ -1,0 +1,41 @@
+#tableHeading{
+    margin-top: 3.5vh;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 25%;
+}
+
+#searchBox{
+    margin-left: 52vw;
+    max-width: 20%;
+    margin-bottom: 2%;
+}
+
+#container{
+    max-width: 65%;
+    margin-top: 10vh;
+    margin-left: 20%;
+}
+
+#tableHead{
+    background-color: #005A7F;
+}
+
+th{
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+
+#selector{
+    max-width: 20%;
+}
+
+#imageCard{
+    margin-left: 20%;
+}

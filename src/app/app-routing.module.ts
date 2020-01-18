@@ -21,6 +21,7 @@ import { AdminPaymentComponent } from './admin/admin-payment/admin-payment.compo
 import { CMLoggedIn } from './canteen-manager/CMLoggedIn/CMLoggedIn.component';
 import { CMUploadMenuComponent } from './canteen-manager/cmupload-menu/cmupload-menu.component';
 import { PageNotFoundComponent } from './Shared/page-not-found/page-not-found.component';
+import { ShowUsersAdminComponent } from './admin/show-users/show-users.component';
 
 const appRoutes: Routes = [
   { path: '', component: StudentComponent },
@@ -39,11 +40,11 @@ const appRoutes: Routes = [
   { path: 'uploadDetails', component: UploadDetailsComponent },
   { path: 'searchStu', component: SearchStudentComponent },
   { path: 'adminMenu', component: AdminMenuComponent },
-  { path: 'viewUsersAdmin', component: ShowUsersComponent },
   { path: 'paymenthistoryadmin', component: AdminPaymentComponent },
   { path: 'CMLogged', component: CMLoggedIn },
   { path: 'CMUpload', component: CMUploadMenuComponent },
   { path: 'CMShow', component: ShowUsersComponent },
+  { path: 'AdminShow', component: ShowUsersAdminComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'not-found' }
 ];

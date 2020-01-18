@@ -1,0 +1,50 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+
+ <div id="container">
+    <nav id="breadcrumb" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/adminLogged">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Registered Users</li>
+      </ol>
+    </nav>
+    <p id="tableHeading">All Registered Users - {{ todayDate }}</p>
+    <div id="selector">
+      <select class="custom-select custom-select-sm" (change)="generateList($event.target.value)">
+        <option selected>Select type</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="snacks">Snacks</option>
+        <option value="teacoffee">Tea/Coffee</option>
+        <option value="teacoffeeE">Tea/Coffee(E)</option>
+      </select>
+    </div>
+    <div id="searchBox" class="input-group input-group-sm">
+      <input type="text" class="form-control" (keyup)="searchStud(searchBox)" #searchBox placeholder="Search here">
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="button">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div id="table">
+        <table class="table table-striped table-bordered table-hover">
+            <thead id="tableHead" class="thead">
+              <tr>
+                <th scope="col">S. No</th>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Photo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let student of sortedStudArr; let i = index">
+                <td>{{ i+1 }}</td>
+                <td>{{ student.Stud_ID }}</td>
+                <td>{{ student.Stud_Name }}</td>
+                <td><img src="{{ student.Photo }}"/></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    </div>
+<app-footer></app-footer>

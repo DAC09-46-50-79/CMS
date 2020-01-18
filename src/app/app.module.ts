@@ -33,6 +33,7 @@ import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
 import { ActualPaymentComponent } from './student/actual-payment/actual-payment.component';
 import { CMUploadMenuComponent } from './canteen-manager/cmupload-menu/cmupload-menu.component';
 import { PageNotFoundComponent } from './Shared/page-not-found/page-not-found.component';
+import { ShowUsersAdminComponent } from './admin/show-users/show-users.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,7 @@ import { PageNotFoundComponent } from './Shared/page-not-found/page-not-found.co
     AdminNavBarComponent,
     ActualPaymentComponent,
     CMUploadMenuComponent,
-    ShowUsersComponent,
+    ShowUsersAdminComponent,
     PageNotFoundComponent
   ],
   imports: [

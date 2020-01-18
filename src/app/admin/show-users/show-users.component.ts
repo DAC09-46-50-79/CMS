@@ -10,7 +10,7 @@ import { Food } from 'src/app/Shared/Models/food.model';
   templateUrl: './show-users.component.html',
   styleUrls: ['./show-users.component.css']
 })
-export class ShowUsersComponent implements OnInit {
+export class ShowUsersAdminComponent implements OnInit {
   todayDate: string;
   allStudents: Food[];
   interestedStudID: number[];
