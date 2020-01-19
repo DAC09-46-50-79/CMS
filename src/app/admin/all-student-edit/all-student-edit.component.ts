@@ -1,32 +1,32 @@
 import { ToastrService } from './../../Shared/toastr.service';
-import { Validation } from './../../Shared/Validation.service';
+import { Students } from './../../Students.service';
 import { Component, OnInit } from '@angular/core';
-import { Student } from 'src/app/Shared/Models/Student.model';
 import { ActivatedRoute } from '@angular/router';
-import { Students } from 'src/app/Students.service';
+import { Student } from 'src/app/Shared/Models/Student.model';
 
 @Component({
-  selector: 'app-student-edit',
-  templateUrl: './student-edit.component.html',
-  styleUrls: ['./student-edit.component.css']
+  selector: 'app-all-student-edit',
+  templateUrl: './all-student-edit.component.html',
+  styleUrls: ['./all-student-edit.component.css']
 })
-export class StudentEditComponent implements OnInit {
-  canEdit: boolean;
+export class AllStudentEditComponent implements OnInit {
+
   currentStudID: number;
   currName: string;
   currID: number;
   currEmail: string;
   currPhone: number;
   currPW: string;
+  canEdit: boolean;
   updatedStud: Student;
 
-  constructor(private studentSer: Students, private validation: Validation, private toastr: ToastrService) { 
+  constructor(private route: ActivatedRoute, private studentSer: Students, private toastr: ToastrService) { 
     this.canEdit = false;
     this.updatedStud = new Student();
   }
 
   ngOnInit() {
-    this.currentStudID = this.validation.currentStudent;
+    this.currentStudID = this.route.snapshot.params['id'];
     this.studentSer.getStudent(this.currentStudID).subscribe(
       (data)=>{
         this.currName = data.Stud_Name;
@@ -38,20 +38,19 @@ export class StudentEditComponent implements OnInit {
     );
   }
 
-  enableStudentEdit()
-  {
+  enableAdminEdit(){
     this.canEdit = true;
   }
 
   updateStud(){
+    this.updatedStud.Stud_ID = this.currID;
+    this.updatedStud.Stud_Name = this.currName;
     this.updatedStud.Email_ID = this.currEmail;
     this.updatedStud.Password = this.currPW;
     this.updatedStud.Phone_Num = this.currPhone;
 
     this.studentSer.getStudent(this.currID).subscribe(
       (data)=>{
-        this.updatedStud.Stud_ID = data.Stud_ID;
-        this.updatedStud.Stud_Name = data.Stud_Name;
         this.updatedStud.Course = data.Course;
         this.updatedStud.Wallet_Bal = data.Wallet_Bal;
         this.UpdateStudData();

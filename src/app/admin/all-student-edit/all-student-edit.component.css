@@ -1,0 +1,45 @@
+#userHeading{
+    margin-top: 8vh;
+    margin-left: 45vw;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#formContainer{
+    max-width: 28%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#breadcrumb{
+    margin-left: 28%;
+    max-width: 50%;
+    margin-top: 4%;
+}
+
+#editBtn{
+    background-color: #005A7F;
+    margin-left: 7%;
+    margin-right: 20px;
+}
+
+#saveBtn{
+    background-color: #005A7F;
+    margin-left: 16%;
+}
+
+#changePhoto{
+    float:right;
+}
+
+#imageCard{
+    margin-left: 0;
+    float: right;
+    margin-top: 4.6vh;
+    margin-right: 14vw;
+}
+
+label{
+    font-family: 'Arimo', sans-serif;
+}

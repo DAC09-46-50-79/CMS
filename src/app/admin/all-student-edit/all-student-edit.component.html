@@ -1,4 +1,4 @@
-<app-student-nav-bar></app-student-nav-bar>
+<app-admin-nav-bar></app-admin-nav-bar>
 
 <div id="container">
   <nav id="breadcrumb" aria-label="breadcrumb">
@@ -20,11 +20,11 @@
     <form #form="ngForm" (ngSubmit)="submit(form)">
       <div class="form-group">
         <label for="studName">Student Name</label>
-        <input type="text" class="form-control" id="studName" disabled="true" name="currName" [(ngModel)]="currName"/>
+        <input type="text" class="form-control" id="studName" [disabled]="!canEdit" name="currName" [(ngModel)]="currName"/>
       </div>
       <div class="form-group">
         <label for="studID">Student ID</label>
-        <input type="text" class="form-control" id="studID" disabled="true" name="currID" [(ngModel)]="currID"/>
+        <input type="text" class="form-control" id="studID" [disabled]="!canEdit" name="currID" [(ngModel)]="currID"/>
       </div>
 
       <div class="form-group">
@@ -41,6 +41,7 @@
           #email="ngModel"
           [class.is-invalid]="!email.valid && email.touched"
           name="currEmail" [(ngModel)]="currEmail"
+          [disabled]="!canEdit"
         />
 
         <div class="alert alert-danger" *ngIf="!email.valid && email.touched">
@@ -68,6 +69,7 @@
           [disabled]="!canEdit"
           #phnno="ngModel"
           name="currPhone" [(ngModel)]="currPhone"
+          [disabled]="!canEdit"
         />
 
         <div class="alert alert-danger" *ngIf="!phnno.valid && phnno.touched">
@@ -96,6 +98,7 @@
           [disabled]="!canEdit"
           #passwd="ngModel"
           name="currPW" [(ngModel)]="currPW"
+          [disabled]="!canEdit"
         />
 
         <div class="alert alert-danger" *ngIf="!passwd.valid && passwd.touched">
@@ -110,7 +113,7 @@
       <button id="saveBtn" type="button" (click)="updateStud()" class="btn btn-primary">
         Save Profile
       </button>
-      <button id="editBtn" type="button" (click)="enableStudentEdit()" class="btn btn-primary">
+      <button id="editBtn" type="button" (click)="enableAdminEdit()" class="btn btn-primary">
         Edit Profile
       </button>
     </form>

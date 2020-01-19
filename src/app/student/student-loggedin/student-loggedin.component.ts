@@ -87,46 +87,68 @@ export class StudentLoggedinComponent implements OnInit {
   }
 
   registerFood(form) {
+    let flag = 1;
     this.food.Breakfast = form.value.breakfastCB == true ? 1: 0;
     this.food.Lunch = form.value.lunchCB  == true ? 1: 0;
     this.food.TeaCoffee = form.value.teacoffeeCB  == true ? 1: 0;
     this.food.TeaCoffeeE = form.value.teacoffeeECB  == true ? 1: 0;
     this.food.Snacks = form.value.snacksCB == true ? 1: 0;
     this.food.Stud_ID = this.validation.currentStudent;
-    this.food.Date = this.todayDate;
 
-    if(this.calculateAmt()){
-      this.register.registerFood(this.food).subscribe(
-        (data)=>{
-          if(data == null){
-            this.toastrSer.Error("Some error occured!");
-          }
-          else{
-            let str = "";
-            if(this.food.Breakfast){
-              str = str.concat("Breakfast ");
-            }
-            if(this.food.Lunch){
-              str = str.concat("Lunch ");
-            }
-            if(this.food.Snacks){
-              str += "Snacks ";
-            }
-            if(this.food.TeaCoffee){
-              str += "Tea/Coffee ";
-            }
-            if(this.food.TeaCoffeeE){
-              str += "Tea/Coffee(E) ";
-            }
-            this.toastrSer.Success(str, "Registered");
-          }
-        }
-      );
+    let currentHour = +(this.datepipe.transform(new Date(), 'HH'));
+    if(currentHour >= 18 && currentHour <= 0){
+      //next day logic
+      if(new Date().getDay() != 6){
+        let nextDay: string = this.datepipe.transform((new Date().getDate() + 1), 'yyyy-MM-dd');
+        this.food.Date = nextDay;
+      }
+      else{
+        flag = 0;
+      }
+    } 
+    else if(currentHour > 0 && currentHour <= 8 && (new Date().getDay()) != 0){
+      this.food.Date = this.todayDate;
     }
     else{
-      this.toastrSer.Error("Insufficient wallet balance");
+      flag = 0;
     }
-    form.reset();
+    if(flag == 1){
+      if(this.calculateAmt()){
+        this.register.registerFood(this.food).subscribe(
+          (data)=>{
+            if(data == null){
+              this.toastrSer.Error("Some error occured!");
+            }
+            else{
+              let str = "";
+              if(this.food.Breakfast){
+                str = str.concat("Breakfast ");
+              }
+              if(this.food.Lunch){
+                str = str.concat("Lunch ");
+              }
+              if(this.food.Snacks){
+                str += "Snacks ";
+              }
+              if(this.food.TeaCoffee){
+                str += "Tea/Coffee ";
+              }
+              if(this.food.TeaCoffeeE){
+                str += "Tea/Coffee(E) ";
+              }
+              this.toastrSer.Success(str, "Registered");
+            }
+          }
+        );
+      }
+      else{
+        this.toastrSer.Error("Insufficient wallet balance");
+      }
+      form.reset();
+    }
+    else{
+      this.toastrSer.Error("Food registration will open after 6:00 PM");
+    }
   }
 
   //calculating if the user has the suffiecient wallet balance

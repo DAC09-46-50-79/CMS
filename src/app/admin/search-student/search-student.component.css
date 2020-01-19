@@ -17,7 +17,7 @@
     margin-bottom: 5%;
 }
 
-#SearchBtn{
+#btnColor{
     margin-left: 40%;
     background-color: #005A7F;
 }
@@ -28,4 +28,29 @@ h3{
 
 .form-group{
     margin-top: 5vh;
+}
+
+#tableHead{
+    background-color: #005A7F;
+}
+
+#tableContainer{
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+th{
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+#editBtn{
+    background-color: #005A7F;
 }

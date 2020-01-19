@@ -1,3 +1,4 @@
+import { AllStudentEditComponent } from './admin/all-student-edit/all-student-edit.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
   { path: 'CMUpload', component: CMUploadMenuComponent },
   { path: 'CMShow', component: ShowUsersComponent },
   { path: 'AdminShow', component: ShowUsersAdminComponent },
+  { path: 'allEditStud/:id', component: AllStudentEditComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'not-found' }
 ];

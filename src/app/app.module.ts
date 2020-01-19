@@ -11,7 +11,6 @@ import { ShowUsersComponent } from './canteen-manager/show-users/show-users.comp
 import { CMLoggedIn } from './canteen-manager/CMLoggedIn/CMLoggedIn.component';
 import { CanteenNavBarComponent } from './canteen-manager/canteen-nav-bar/canteen-nav-bar.component';
 import { SearchStudentComponent } from './admin/search-student/search-student.component';
-import { SearchResultComponent } from './admin/search-result/search-result.component';
 import { AdminNavBarComponent } from './admin/admin-nav-bar/admin-nav-bar.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
@@ -34,6 +33,7 @@ import { ActualPaymentComponent } from './student/actual-payment/actual-payment.
 import { CMUploadMenuComponent } from './canteen-manager/cmupload-menu/cmupload-menu.component';
 import { PageNotFoundComponent } from './Shared/page-not-found/page-not-found.component';
 import { ShowUsersAdminComponent } from './admin/show-users/show-users.component';
+import { AllStudentEditComponent } from './admin/all-student-edit/all-student-edit.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,6 @@ import { ShowUsersAdminComponent } from './admin/show-users/show-users.component
     AdminLoginComponent,
     AdminComponent,
     AdminNavBarComponent,
-    SearchResultComponent,
     SearchStudentComponent,
     CanteenNavBarComponent,
     CanteenManagerComponent,
@@ -65,7 +64,8 @@ import { ShowUsersAdminComponent } from './admin/show-users/show-users.component
     ActualPaymentComponent,
     CMUploadMenuComponent,
     ShowUsersAdminComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AllStudentEditComponent
   ],
   imports: [
     HttpClientModule,
