@@ -33,7 +33,7 @@ export class StudentEditComponent implements OnInit {
         this.currID = data.Stud_ID;
         this.currEmail = data.Email_ID;
         this.currPhone = data.Phone_Num;
-        this.currPW = data.Password;
+        this.currPW = data.PasswordTXT;
       }
     );
   }
@@ -45,7 +45,7 @@ export class StudentEditComponent implements OnInit {
 
   updateStud(){
     this.updatedStud.Email_ID = this.currEmail;
-    this.updatedStud.Password = this.currPW;
+    this.updatedStud.PasswordTXT = this.currPW;
     this.updatedStud.Phone_Num = this.currPhone;
 
     this.studentSer.getStudent(this.currID).subscribe(
@@ -63,6 +63,20 @@ export class StudentEditComponent implements OnInit {
     this.studentSer.updateStudent(this.currID, this.updatedStud).subscribe(
       (data)=>{
         this.toastr.Success("Data Updated Successfully!");
+        this.updateStudPW();
+      }
+    );
+  }
+
+  updateStudPW(){
+    this.studentSer.updatePW(this.currID, this.updatedStud).subscribe(
+      (data)=>{
+        if(data){
+          this.toastr.Success("Data Updated Successfully!");
+        }
+        else{
+          this.toastr.Error("Some error occured while updating");
+        }
       }
     );
   }

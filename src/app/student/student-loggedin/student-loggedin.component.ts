@@ -96,18 +96,25 @@ export class StudentLoggedinComponent implements OnInit {
     this.food.Stud_ID = this.validation.currentStudent;
 
     let currentHour = +(this.datepipe.transform(new Date(), 'HH'));
-    if(currentHour >= 18 && currentHour <= 0){
+    console.log("Current hour = " +currentHour);
+    if(currentHour >= 18){
       //next day logic
+      console.log("Inside next day logic");
       if(new Date().getDay() != 6){
-        let nextDay: string = this.datepipe.transform((new Date().getDate() + 1), 'yyyy-MM-dd');
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        let nextDay = this.datepipe.transform(tomorrow, 'yyyy-MM-dd');
         this.food.Date = nextDay;
+        console.log("Inside sunday check " +this.food.Date);
       }
       else{
+        console.log("inside failure of sunday check 1");
         flag = 0;
       }
     } 
     else if(currentHour > 0 && currentHour <= 8 && (new Date().getDay()) != 0){
       this.food.Date = this.todayDate;
+      console.log("else if. this.food.date=" +this.food.Date);
     }
     else{
       flag = 0;
