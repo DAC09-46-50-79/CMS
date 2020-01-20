@@ -20,12 +20,16 @@ export class StudentComponent implements OnInit {
   loginStudent(form) {
     let studentID = +(form.value.studID);
     let studentPass = form.value.password;
-    let output = this.validation.validateStudent(studentID, studentPass);
-    console.log("output"+output)
-    // if (output) {
-    //   this.router.navigate(["/studentLogged"]);
-    // } else {
-    //   this.toastrSer.Error("Incorrect ID or password!", "Invalid Credentials");
-    // }
+    let validationOutput: number;
+    this.validation.validateStudent(studentID, studentPass).then(
+      (data: number)=>{
+        validationOutput = data;
+        if (validationOutput) {
+          this.router.navigate(["/studentLogged"]);
+        } else {
+          this.toastrSer.Error("Incorrect ID or password!", "Invalid Credentials");
+        }
+      }
+    );
   }
 }

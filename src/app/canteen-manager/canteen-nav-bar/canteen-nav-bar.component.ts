@@ -1,3 +1,4 @@
+import { Validation } from './../../Shared/Validation.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CanteenNavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private validation: Validation) { }
 
   ngOnInit() {
   }
 
+  logoutCM(){
+    this.validation.isCMLoggedIn = false;
+    this.validation.currentCM = 0;
+  }
 }

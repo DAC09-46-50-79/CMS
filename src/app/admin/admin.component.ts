@@ -18,13 +18,16 @@ export class AdminComponent implements OnInit {
   loginAdmin(form) {
     let adID = Number(form.value.adminID);
     let adPass = form.value.adminPass;
-    this.validation.validateAdmin(adID, adPass);
-    if (this.validation.isAdminLoggedIn) {
-      this.router.navigate(["/adminLogged"]);
-    }
-    else{
-      this.toastrSer.Error("Incorrect ID or password!", "Invalid Credentials");
-    }
+
+    this.validation.validateAdmin(adID, adPass).then(
+      (data: number)=>{
+        if (data) {
+          this.router.navigate(["/adminLogged"]);
+        } else {
+          this.toastrSer.Error("Incorrect ID or password!", "Invalid Credentials");
+        }
+      }
+    );
   }
   
 }

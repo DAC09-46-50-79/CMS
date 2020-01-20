@@ -10,7 +10,7 @@
         <a routerLink="/menu" class="nav-link active">Today's Menu</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Username</a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">{{ studentName }}</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" routerLink="/student/profile">Profile</a>
           <a class="dropdown-item" routerLink="/stats">Stats</a>
@@ -18,7 +18,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">Logout</a>
+        <a routerLink="/" (click)="logoutStud()" class="nav-link">Logout</a>
       </li>
     </ul>
   </div>

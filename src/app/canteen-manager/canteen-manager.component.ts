@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CanteenManagerComponent implements OnInit {
 
-  constructor(private validation: Validation, private router: Router, private toastrServ: ToastrService) { }
+  constructor(private validation: Validation, private router: Router, private toastrSer: ToastrService) { }
   loggedInStatus: boolean;
   ngOnInit() {
     
@@ -19,12 +19,15 @@ export class CanteenManagerComponent implements OnInit {
   validateCM(form){
     let cmID = Number(form.value.cmID);
     let cmPass = form.value.password;
-    this.validation.validateCM(cmID, cmPass);
-    if(this.validation.isCMLoggedIn){
-      this.router.navigate(['/CMLogged']);
-    }
-    else{
-      this.toastrServ.Error("Incorrect ID or password", "Invalid Credentials");
-    }
+
+    this.validation.validateCM(cmID, cmPass).then(
+      (data: number)=>{
+        if (data) {
+          this.router.navigate(["/CMLogged"]);
+        } else {
+          this.toastrSer.Error("Incorrect ID or password!", "Invalid Credentials");
+        }
+      }
+    );
   }
 }

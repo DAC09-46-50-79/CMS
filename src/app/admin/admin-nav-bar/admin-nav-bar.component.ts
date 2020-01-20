@@ -1,3 +1,4 @@
+import { Validation } from './../../Shared/Validation.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminNavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private validation: Validation) { }
 
   ngOnInit() {
+  }
+
+  logoutAdmin(){
+    this.validation.isAdminLoggedIn = false;
+    this.validation.currentAdmin = 0;
   }
 
 }

@@ -1,3 +1,5 @@
+import { Students } from 'src/app/Students.service';
+import { Validation } from './../../Shared/Validation.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentNavBarComponent implements OnInit {
 
-  constructor() { }
+  studentName: string;
+  
+  constructor(private validation: Validation, private studentSer: Students) { }
 
   ngOnInit() {
+    this.studentSer.getStudent(this.validation.currentStudent).subscribe(
+      (data)=>{
+        this.studentName = data.Stud_Name;
+      }
+    );
   }
 
+  logoutStud(){
+    this.validation.currentStudent = 0;
+    this.validation.isStudentLoggedIn = false;
+  }
 }
