@@ -25,8 +25,6 @@ export class StudentLoggedinComponent implements OnInit {
 
   constructor(private toastrSer: ToastrService, private validation: Validation, private datepipe: DatePipe, private register: RegisterFood, private paymentService: PaymentService, private studentSer: Students, private expenseSer: ExpensesService) {
 
-    this.getWalletBalance();
-
     this.food = new Food();
 
     let currentDate = new Date();
@@ -35,6 +33,9 @@ export class StudentLoggedinComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.getWalletBalance();
+
     let todayDate = new Date();
     let currentDate = this.datepipe.transform(todayDate, 'M');
 
@@ -99,16 +100,13 @@ export class StudentLoggedinComponent implements OnInit {
     console.log("Current hour = " +currentHour);
     if(currentHour >= 18){
       //next day logic
-      console.log("Inside next day logic");
       if(new Date().getDay() != 6){
         const tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);
         let nextDay = this.datepipe.transform(tomorrow, 'yyyy-MM-dd');
         this.food.Date = nextDay;
-        console.log("Inside sunday check " +this.food.Date);
       }
       else{
-        console.log("inside failure of sunday check 1");
         flag = 0;
       }
     } 
@@ -227,12 +225,12 @@ export class StudentLoggedinComponent implements OnInit {
 
     this.expenseSer.updateExpense(this.updatedExpense.Stud_ID, this.updatedExpense.Month, this.updatedExpense).subscribe(
       (data)=>{
-        if(data == null){
-          // this.postExpense(this.updatedExpense);
-        }
-        else{
-          console.log("updateExpense() done");
-        }
+        // if(data == null){
+        //   // this.postExpense(this.updatedExpense);
+        // }
+        // else{
+        //   console.log("updateExpense() done");
+        // }
       }
     );
   };
