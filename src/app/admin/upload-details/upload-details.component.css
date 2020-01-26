@@ -1,8 +1,6 @@
 #container{
-    /* max-width: 25%; */
     margin-top: 10vh;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 28vw;
 }
 
 #breadcrumb{
@@ -14,7 +12,13 @@
 
 h3{
     margin-left: 18%;
+    margin-bottom: 3%;
 }
+
+h4{
+    margin-top: 3%;
+}
+
 
 .custom-file{
     margin-top: 8%;

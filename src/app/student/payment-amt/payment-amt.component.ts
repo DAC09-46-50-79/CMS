@@ -17,6 +17,6 @@ export class PaymentAmtComponent implements OnInit {
 
   proceedToPay(form){
     this.paymentService.paymentAmount = +(form.value.amt);
-    this.router.navigate(['/paymentform']);
+    this.router.navigate(['/paymentform/actualpayment/1']);
   }
 }

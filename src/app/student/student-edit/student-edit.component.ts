@@ -62,7 +62,6 @@ export class StudentEditComponent implements OnInit {
   UpdateStudData(){
     this.studentSer.updateStudent(this.currID, this.updatedStud).subscribe(
       (data)=>{
-        this.toastr.Success("Data Updated Successfully!");
         this.updateStudPW();
       }
     );
